@@ -13,13 +13,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('jobd_detail', function () {
-    return view('job_detail');
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/home', function () {
+    return view('welcome');
+});
+
+Route::get('/freelance', function () {
+    return view('freelance');
+});
+
+Route::get('/jobs', function () {
+    return view('jobs');
+});
+
+Route::get('/candidate', function () {
+    return view('candidate');
+});
+
+Route::get('/job_details', function () {
+    return view('job_details');
+});
+
+Route::get('/elments', function () {
+    return view('job_details');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+Route::get('/single-blog', function () {
+    return view('single-blog');
+});
+
+Route::get('/Login', function () {
+    return view('Login');
 });

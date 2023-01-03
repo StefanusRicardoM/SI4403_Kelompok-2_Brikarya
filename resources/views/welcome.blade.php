@@ -51,23 +51,23 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">home</a></li>
-                                            <li><a href="freelance.html">Find Freelance</a></li>
-                                            <li><a href="jobs.html">Browse Job</a></li>
+                                            <li><a class="nav-link" href="/home">home</a></li>
+                                            <li><a class="nav-link" href="/freelance">Find Freelance</a></li>
+                                            <li><a class="nav-link" href="/jobs">Browse Job</a></li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="candidate.html">Candidates </a></li>
-                                                    <li><a href="job_details.html">job details </a></li>
-                                                    <li><a href="elements.html">elements</a></li>
+                                                    <li><a class="nav-link" href="/candidate">Candidates </a></li>
+                                                    <li><a class="nav-link" href="/job_details">job details </a></li>
+                                                    <li><a class="nav-link" href="/elements">elements</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                    <li><a  class="nav-link" href="/blog">blog</a></li>
+                                                    <li><a  class="nav-link"href="/single-blog">single-blog</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a class="nav-link" href="/contact">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -75,7 +75,7 @@
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="Appointment">
                                     <div class="phone_num d-none d-xl-block">
-                                        <a href="#">Log in</a>
+                                        <a class="nav-link" href="/Login">Login</a>
                                     </div>
                                     <div class="d-none d-lg-block">
                                         <a class="boxed-btn3" href="#">Post a Job</a>
