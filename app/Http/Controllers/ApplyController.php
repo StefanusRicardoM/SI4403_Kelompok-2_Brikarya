@@ -73,7 +73,7 @@ class ApplyController extends Controller
 
         $check = Apply::where('job_id', $request->id)->where('user_id', Auth::user()->id)->first();
         if($check){
-            return back()->with('error', 'Anda sudah apply pada lowongan ini');
+            return back()->with('error', 'Anda sudah melamar pada lowongan ini');
         }else{
             $file = $request->file('cv');
             $filename = uniqid() . "_" . $file->getClientOriginalName();
