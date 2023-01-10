@@ -42,7 +42,7 @@
                             <div class="col-xl-3 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="" alt="LOGO BRIKARYA">
+                                        <img src="img/logo.png" alt="LOGO BRIKARYA">
                                     </a>
                                 </div>
                             </div>
