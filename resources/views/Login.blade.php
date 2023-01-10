@@ -21,13 +21,30 @@
 
             <div class="d-flex align-items-center h-custom-2 px-3 ms-xl-3 mt-5 pt-5 pt-xl-1 mt-xl-n5">
 
-            <form action="config/login.php" method="post" style="width: 23rem;">
-
+            <form action="{{route("user.loginProcess")}}" method="post" style="width: 23rem;">
+                @csrf
+                @method("POST")
                 <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login</h3>
-
+                @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </div>
+                @endif
+                @if (Session::has('error'))
+                    <div id="error" class="alert alert-danger">
+                        {{ Session::get('error') }}
+                    </div>
+                @endif
+                @if (Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
                 <div class="form-outline mb-4 wit">
                 <label class="form-label" for="form2Example18">Email</label>
-                <input type="email" id="form2Example18" class="form-control" name="emailu"/>
+                <input type="email" id="form2Example18" class="form-control" name="email"/>
                 </div>
 
                 <div class="form-outline mb-4">
@@ -44,7 +61,7 @@
                 <button type="submit" class="btn bg-primary text-white mt-7">Login</button>
                 </div>
 
-                <p>Don't have an account? <a href="Rizky_Register.php" class="link-info">Register here</a></p>
+                <p>Don't have an account? <a href="{{route('user.register')}}" class="link-info">Register here</a></p>
 
             </form>
 

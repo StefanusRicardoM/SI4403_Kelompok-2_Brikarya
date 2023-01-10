@@ -28,20 +28,20 @@
                         @foreach($blogs as $blog)
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="/storage/images/{{$blog['gambar']}}" alt="">
-                                    <a href="{{route('blog.detail', ['id' => $blog['id']])}}" class="blog_item_date">
+                                    <img class="card-img rounded-0" src="/storage/images/{{$blog->gambar}}" alt="">
+                                    <a href="{{route('blog.detail', ['id' => $blog->id])}}" class="blog_item_date">
                                         <h3>15</h3>
                                         <p>Jan</p>
                                     </a>
                                 </div>
 
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="{{route('blog.detail', ['id' => $blog['id']])}}">
-                                        <h2>{{$blog['judul']}}</h2>
+                                    <a class="d-inline-block" href="{{route('blog.detail', ['id' => $blog->id])}}">
+                                        <h2>{{$blog->judul}}</h2>
                                     </a>
-                                    <p>{{$blog['isi']}}</p>
+                                    <p>{{$blog->isi}}</p>
                                     <ul class="blog-info-link">
-                                        <li><i class="fa fa-user"></i> {{$blog['kategori']}}</li>
+                                        <li><i class="fa fa-user"></i> {{$blog->kategori}}</li>
                                     </ul>
                                 </div>
                             </article>
@@ -72,10 +72,10 @@
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
+                            <form action="{{route('blog')}}">
                                 <div class="form-group">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
+                                        <input type="text" class="form-control" name="keyword" value="{{request()->keyword}}" placeholder='Search Keyword'
                                             onfocus="this.placeholder = ''"
                                             onblur="this.placeholder = 'Search Keyword'">
                                         <div class="input-group-append">
@@ -91,46 +91,17 @@
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
+                                @foreach($category as $category)
                                 <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Resaurant food</p>
-                                        <p>(37)</p>
+                                    <a href="/blog/?keyword=&category={{$category->kategori}}" class="d-flex">
+                                        <p>{{$category->kategori}}</p>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Travel news</p>
-                                        <p>(10)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Modern technology</p>
-                                        <p>(03)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Product</p>
-                                        <p>(11)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Inspiration</p>
-                                        <p>21</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Health Care (21)</p>
-                                        <p>09</p>
-                                    </a>
-                                </li>
+                                @endforeach
                             </ul>
                         </aside>
 
-                        <aside class="single_sidebar_widget popular_post_widget">
+                        {{-- <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Recent Post</h3>
                             <div class="media post_item">
                                 <img src="img/post/post_1.png" alt="post">
@@ -248,7 +219,7 @@
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                     type="submit">Subscribe</button>
                             </form>
-                        </aside>
+                        </aside> --}}
                     </div>
                 </div>
             </div>
