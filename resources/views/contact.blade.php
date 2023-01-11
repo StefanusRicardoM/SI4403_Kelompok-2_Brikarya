@@ -84,8 +84,8 @@
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-home"></i></span>
             <div class="media-body">
-              <h3>Bojongsoang, California.</h3>
-              <p>Bojongsoang, CA 91770</p>
+              <h3>Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot.</h3>
+              <p>Kabupaten Bandung, Jawa Barat 40257</p>
             </div>
           </div>
           <div class="media contact-info">
