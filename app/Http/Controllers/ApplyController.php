@@ -94,7 +94,7 @@ class ApplyController extends Controller
         }
 
     
-        return back()->with('success', 'Apply Berhasil');
+        return back()->with('success', 'Apply telah Berhasil');
     }
 
     /**

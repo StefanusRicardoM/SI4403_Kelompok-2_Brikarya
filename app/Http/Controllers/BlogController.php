@@ -43,7 +43,7 @@ class BlogController extends Controller
         ]);
 
         $komen->save();
-        return back()->with('success', 'Komentar berhasil ditambahkan');
+        return back()->with('success', 'Komentar telah berhasil ditambahkan');
     }
 
     /**
@@ -86,7 +86,7 @@ class BlogController extends Controller
         ]);
 
         $blog->save();
-        return back()->with('success', 'Blog berhasil ditambahkan');
+        return back()->with('success', 'Blog telah berhasil ditambahkan');
     }
 
     /**
@@ -138,7 +138,7 @@ class BlogController extends Controller
         }
 
         $blog->save();
-        return back()->with('success', 'Blog berhasil diupdate');
+        return back()->with('success', 'Blog telah berhasil diupdate');
     }
 
     /**
